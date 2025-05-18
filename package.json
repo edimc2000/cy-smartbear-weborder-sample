@@ -6,7 +6,8 @@
     "test:smokes":       "npx cypress run --env grepTags=\"@smoke\"",
     "test:regression":  "npx cypress run --env grepTags=\"@regression\"",
     "test:true2":        "npx cypress run --env grepTags=\"@true11\"",
-    "test:smoke":        "npx cypress run --env USERNAME=$USERNAME, PASSWORD=$PASSWORD, grepTags=\"@smoke\","
+    "test:smoke5":        "npx cypress run --env USERNAME=$USERNAME, PASSWORD=$PASSWORD, grepTags=\"@smoke\",",
+    "test:smoke":        "npx cypress run --env USERNAME==${{ secrets.SMARTBEAR_TEST_USERNAME }}, PASSWORD=${{ secrets.SMARTBEAR_TEST_PASSWORD }}, grepTags=\"@smoke\","
   },
   "keywords": [],
   "author": "redtag",
