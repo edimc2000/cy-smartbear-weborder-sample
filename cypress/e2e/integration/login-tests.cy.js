@@ -33,7 +33,5 @@ describe('Login Verification', () => {
     basePage.getWelcomeUserInfo().should('include.text', Cypress.env('USERNAME'))
   })
 
-
-
 })
 
