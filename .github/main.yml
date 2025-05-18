@@ -10,7 +10,7 @@ jobs:
       # and run all Cypress tests
       - uses: cypress-io/github-action@v6
         env:
-          USERNAME: ${{ secrets.SMARTBEAR_TEST_USERNAME }}
+          USERNAME: ${{ secrets.SMARTBEAR_TEST_USERNAME }} 
           PASSWORD: ${{ secrets.SMARTBEAR_TEST_PASSWORD }}
           APP_BASE_URL: "http://secure.smartbearsoftware.com/samples/TestComplete12/WebOrders/"
         with: 
