@@ -12,7 +12,7 @@ jobs:
         env:
           USERNAME: ${{ secrets.SMARTBEAR_TEST_USERNAME}}
           PASSWORD: ${{ secrets.SMARTBEAR_TEST_PASSWORD}}
-          APP_BASE_URL: "http://secure.smartbearsoftware.com/samples/TestComplete12/WebOrders/"
+          APP_BASE_URL: http://secure.smartbearsoftware.com/samples/TestComplete12/WebOrders/
         with: 
           command: npm run test:smoke
 
