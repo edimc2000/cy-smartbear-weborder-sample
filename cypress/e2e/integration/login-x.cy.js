@@ -1,12 +1,12 @@
 /// <reference types="cypress"/>
-import BasePage from "../../pages/BasePage";
-import loginPage from "../../pages/LoginPage";
+import BasePage from "../../pages/BasePage"
+import loginPage from "../../pages/LoginPage"
 
 describe('Login Verification', () => {
 
   const basePage = new BasePage()
 
-  it('Validate login with valid credentials', { tags: ['@smoke'] }, () => {
+  it('Validate login with valid credentials', { tags: ['true11'] }, () => {
     cy.visit(Cypress.env('APP_BASE_URL'))
     loginPage.login(Cypress.env('USERNAME'), Cypress.env('PASSWORD'))
     cy.url().should('include', 'weborders')
@@ -15,7 +15,7 @@ describe('Login Verification', () => {
     basePage.getWelcomeUserInfo().should('include.text', Cypress.env('USERNAME'))
   })
 
-  it('2 Validate login with valid credentials', { tags: ["@regression"] }, () => {
+  it('2 Validate login with valid credentials', { tags: ["@smoke"] }, () => {
     cy.visit(Cypress.env('APP_BASE_URL'))
     loginPage.login(Cypress.env('USERNAME'), Cypress.env('PASSWORD'))
     cy.url().should('include', 'weborders')
@@ -24,7 +24,9 @@ describe('Login Verification', () => {
     basePage.getWelcomeUserInfo().should('include.text', Cypress.env('USERNAME'))
   })
 
-  it('20 Validate login with valid credentials', { tags: ["@true11"] }, () => {
+
+
+    it('3 Validate login with valid credentials', { tags: ["@regression"] }, () => {
     cy.visit(Cypress.env('APP_BASE_URL'))
     loginPage.login(Cypress.env('USERNAME'), Cypress.env('PASSWORD'))
     cy.url().should('include', 'weborders')

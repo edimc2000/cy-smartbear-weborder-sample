@@ -2,6 +2,7 @@ const { defineConfig } = require("cypress");
 require('dotenv').config();
 
 module.exports = defineConfig({
+  watchForFileChanges: false,
   viewportHeight: 1080,
   viewportWidth: 1920,
   env: {
@@ -11,7 +12,8 @@ module.exports = defineConfig({
   },
   e2e: {
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      require('@cypress/grep/src/plugin')(config)
+      return config
     },
   },
 });

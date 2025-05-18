@@ -1,20 +1,10 @@
-export default class LoginPage {
-  getUsernameInput() {
-    return cy.get("#ctl00_MainContent_username");
-  }
-
-  getPasswordInput() {
-    return cy.get("#ctl00_MainContent_password");
-  }
-
-  getLoginButton() {
-    return cy.get("#ctl00_MainContent_login_button");
-  }
-
-  getErrorMessage() {
-    return cy.get("#ctl00_MainContent_status");
-  }
-
+class LoginPage {
+  //Selectors 
+  getUsernameInput = () => cy.get("#ctl00_MainContent_username")
+  getPasswordInput = () => cy.get("#ctl00_MainContent_password")
+  getLoginButton = () => cy.get("#ctl00_MainContent_login_button")
+  getErrorMessage = () => cy.get("#ctl00_MainContent_status")
+  
   // Reusable methods for login page
   enterUsername(username) {
     this.getUsernameInput().type(username);
@@ -34,3 +24,5 @@ export default class LoginPage {
     this.clickOnLoginButton();
   }
 }
+
+module.exports = new LoginPage()
