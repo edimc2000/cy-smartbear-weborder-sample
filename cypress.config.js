@@ -6,7 +6,7 @@ module.exports = defineConfig({
   viewportHeight: 1080,
   viewportWidth: 1920,
   env: {
-    APP_BASE_URL: process.env.APP_BASE_URL,
+    APP_BASE_URL: "http://secure.smartbearsoftware.com/samples/TestComplete12/WebOrders/",
     USERNAME: process.env.UI_USERNAME,
     PASSWORD: process.env.UI_PASSWORD
   },
