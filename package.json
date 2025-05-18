@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test:smoke": "npx cypress run --env grepTags=\"@smoke\"",
-    "test:regression": "npx cypress run --env grepTags=\"@regression\"",
-    "test:true": "npx cypress run --env grepTags=\"@true11\""
+    "test:smoke":       "npx cypress run --env grepTags=\"@smoke\"",
+    "test:regression":  "npx cypress run --env grepTags=\"@regression\"",
+    "test:true":        "npx cypress run --env grepTags=\"@true11\""
   },
   "keywords": [],
-  "author": "SmartBear",
+  "author": "redtag",
   "license": "ISC",
   "description": "",
   "devDependencies": {
