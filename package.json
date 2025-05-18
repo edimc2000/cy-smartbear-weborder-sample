@@ -6,7 +6,7 @@
     "test:smokes":       "npx cypress run --env grepTags=\"@smoke\"",
     "test:regression":  "npx cypress run --env grepTags=\"@regression\"",
     "test:true2":        "npx cypress run --env grepTags=\"@true11\"",
-    "test:smoke":        "npx cypress run --env grepTags=\"@smoke\", UI_USERNAME=$USERNAME,UI_PASSWORD=$PASSWORD, APP_BASE_URL=$APP_BASE_URL"
+    "test:smoke":        "npx cypress run --env grepTags=\"@smoke\", UI_USERNAME=$USERNAME,UI_PASSWORD=$PASSWORD, APP_BASE_URL=\"http://secure.smartbearsoftware.com/samples/TestComplete12/WebOrders\""
   },
   "keywords": [],
   "author": "redtag",
