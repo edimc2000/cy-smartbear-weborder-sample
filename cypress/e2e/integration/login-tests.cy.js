@@ -4,18 +4,20 @@ import LoginPage from "../../pages/LoginPage";
 
 describe('Login Verification', () => {
 
-  const loginPage = new LoginPage();
-  const basePage = new BasePage();
+  const loginPage = new LoginPage()
+  const basePage = new BasePage()
 
   it('Validate login with valid credentials', () => {
-    cy.visit(Cypress.env('APP_BASE_URL'));
+    cy.visit(Cypress.env('APP_BASE_URL'))
 
-    loginPage.login(Cypress.env('USERNAME'), Cypress.env('PASSWORD'));
+    loginPage.login(Cypress.env('USERNAME'), Cypress.env('PASSWORD'))
 
-    cy.url().should('include', 'weborders');
+    cy.url().should('include', 'weborders')
 
-    basePage.getWebOrdersHeading().should('have.text', 'Web Orders');
-    basePage.getLogoutButton().should('have.text', 'Logout');
-    basePage.getWelcomeUserInfo().should('include.text', Cypress.env('USERNAME'));
+    basePage.getWebOrdersHeading().should('have.text', 'Web Orders')
+    basePage.getLogoutButton().should('have.text', 'Logout')
+    basePage.getWelcomeUserInfo().should('include.text', Cypress.env('USERNAME'))
+
+
   })
 });

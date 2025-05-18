@@ -6,8 +6,8 @@ module.exports = defineConfig({
   viewportWidth: 1920,
   env: {
     APP_BASE_URL: process.env.APP_BASE_URL,
-    USERNAME: process.env.USERNAME,
-    PASSWORD: process.env.PASSWORD
+    USERNAME: process.env.UI_USERNAME,
+    PASSWORD: process.env.UI_PASSWORD
   },
   e2e: {
     setupNodeEvents(on, config) {
