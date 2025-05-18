@@ -25,7 +25,6 @@ describe('Login Verification', () => {
   })
 
 
-
     it('3 Validate login with valid credentials', { tags: ["@regression"] }, () => {
     cy.visit(Cypress.env('APP_BASE_URL'))
     loginPage.login(Cypress.env('USERNAME'), Cypress.env('PASSWORD'))
